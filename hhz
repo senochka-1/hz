@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>aritmētiskās darbības</h1>
+    <label for="a1">Ievadi 1. skaitli</label>
+    <input type="number" id="a1">
+    <br>
+    <label for="a2">Ievadi 2. skaitli</label>
+    <input type="number" id="a2">
+    <button onclick="go()">Aprēķīnāt</button>
+    <p><span id="atb">Summa</span></p>
+    <p><span id="atb1">starpiba</span></p>
+    <p><span id="atb2">reizinajums</span></p>
+    <p><span id="atb3">dlijums</span></p>
+    <script>
+        function go(){
+            let a = Number(a1.value);
+            let b = Number(a2.value);
+            let sum = a+b;
+            document.getElementById("atb").innerHTML=sum.toFixed(2);
+            let starpiba = a-b;
+            document.getElementById("atb1").innerHTML=starpiba.toFixed(2);
+            let reiz = a*b;
+            document.getElementById("atb2").innerHTML=reiz.toFixed(2);
+            let dal = a/b;
+            document.getElementById("atb3").innerHTML=dal.toFixed(2)
+        }
+    </script>
+</body>
+</html>
